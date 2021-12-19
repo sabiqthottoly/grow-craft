@@ -59,22 +59,29 @@
 
                 </ul>
             </nav>
-            <div class="hamburger-icon">
+
+            <!-- mobile view nav bar starts -->
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
+                <ul class="mobile-menu">
+                  <li><a href="/home">Home</a></li>
+                  <li><a href="/products">Find Jobs</a></li>
+                  <li><a href="/about">For Employers</a></li>
+                  <li id="login"><a href="/login" >About</a></li>
+                  <li id="signup"><a href="/signup">Services</a></li>
+                  <li id="signup"><a href="/signup">Contact</a></li>
+                  <li id="signup" ><a href="/signup" class="btn-mobile circular">Sumbit Your CV</a></li>
                 </ul>
-            </div>
-            <!--<a href="#" class="button circular">Get a quote</a>-->
+              </div>
+            <!-- mobile view nav bar ends -->
         </div>
     </div>
 </header>
 <!-- .end Header -->
+
+
+<script src="./Js/Index.js"></script>
 </body>
 </html>

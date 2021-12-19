@@ -5646,14 +5646,71 @@ small {
         z-index: 100;
         transition: all 0.2s;
     }
-
-    /* .nav.nav-open {
-        visibility: visible;
-        opacity: 1;
-        right: 0;
-    } */
+   
 }
 
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: rgb(30, 31, 31);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: calc(100vh - 100px);
+    width: 100%;
+}
+
+.mobile-menu li {
+    margin-bottom: 30px;
+}
+
+.mobile-menu li a {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 992px) {
+    header nav {
+      display: none;
+    }
+  
+    #hamburger-icon {
+      display: block;
+    }
+ }
+  
 .nav .main-menu > li {
     position: relative;
     display: inline-block;
@@ -5691,12 +5748,6 @@ small {
 .nav .main-menu > li i.open {
     transform: rotate(90deg);
     transition: all 0.2s;
-}
-
-@media (max-width: 992px) {
-    .nav .main-menu > li i {
-        display: block;
-    }
 }
 
 .nav .main-menu > li:after {
@@ -8313,6 +8364,19 @@ blockquote p {
 /* --------------------------
     6.2 - Buttons
 -------------------------- */
+
+.btn-mobile {
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(78, 170, 213);
+}
+
 .button {
     display: inline-block;
     min-width: 150px;
@@ -8329,9 +8393,6 @@ blockquote p {
     background-color: rgb(78, 170, 213);
 }
 
-.yellow {
-    background-color: rgb(78, 170, 213);
-}
 
 .lightblue .button {
     background-color: rgb(78, 170, 213);
@@ -8349,6 +8410,9 @@ blockquote p {
     border-radius: 50px;
 }
 
+.btn-mobile.circular {
+    border-radius: 50px;
+}
 /* --------------------------
     6.3 - Lines
 -------------------------- */
