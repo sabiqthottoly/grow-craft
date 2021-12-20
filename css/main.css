@@ -5932,11 +5932,70 @@ small {
 
 .slide {
     width: 20%;
+    background-color: #0b0b0b;
     transition: 2s;
+    position: relative;
+}
+
+.slide-content {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 1;
+}
+
+.slide-content h1,p {
+    color: white;
+}
+
+.slide-content h1 {
+    font-size: 60px;
+}
+
+.slide-content p {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.slide-content a {
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .slide img {
     width: 100%;
+    opacity: 0.7;
+}
+
+@media (max-width: 774px) {
+    .slide-content h1 {
+        font-size: 35px;
+    }
+    .slide-content p {
+        font-size: 14px;
+    }
+
+    .slide-content {
+        top: 30%;
+    }
+
+    .slide-content a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .slide-content h1 {
+        font-size: 30px;
+        line-height: 28px;
+    }
+    .slide-content p {
+        font-size: 13px;
+    }
+
+    .slide-content {
+        top: 15%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -5962,7 +6021,7 @@ small {
 }
 
 .manual-btn {
-    border: 2px solid rgb(78, 170, 213);
+    border: 1px solid rgb(78, 170, 213);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -5975,6 +6034,7 @@ small {
 
 .manual-btn:hover {
     background-color: rgb(78, 170, 213);
+    padding: 5px;
 }
 
 #radio1:checked ~ .first {
@@ -6002,7 +6062,7 @@ small {
 }
 
 .navigation-auto div {
-    border: 2px solid rgb(78, 170, 213);
+    border: 1px solid rgb(78, 170, 213);
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
@@ -6027,6 +6087,7 @@ small {
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: rgb(78, 170, 213);
 }
+
 /* slider */
 .index .index-bar {
     display: flex;
