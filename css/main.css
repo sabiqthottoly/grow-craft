@@ -94,6 +94,11 @@
     margin-left: -15px;
 }
 
+.feather-arrow-right img {
+    margin-top: 2px;
+
+}
+
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -5338,6 +5343,11 @@ small {
     }
 }
 
+#row{
+    width:100%;
+    justify-content: center;
+}
+
 /* --------------------------
     4.2 - Footer
 -------------------------- */
@@ -9035,7 +9045,10 @@ blockquote p {
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.1);
+    min-height: 200px;
 }
+
+
 
 .no-radius .service-2 {
     border-radius: 0;
